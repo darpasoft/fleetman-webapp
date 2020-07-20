@@ -12,7 +12,7 @@ import com.virtualpairprogrammers.domain.Vehicle;
 public class PositionTrackingExternalService 
 {
 	@Autowired
-	private RemotePositionMicroserviceCalls remoteService;
+	com.virtualpairprogrammers.services.RemotePositionMicroserviceCalls remoteService;
 	
 	@Autowired 
 	private VehicleRepository repository;
