@@ -6,7 +6,6 @@ node {
         sh "mvn clean package"
    }
     stage('Results') {
-        junit '**/target/surefire-reports/TEST-*.xml'
         archiveArtifacts 'target/*.war'
     }
     stage('deploy') {
