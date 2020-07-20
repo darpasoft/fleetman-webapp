@@ -88,13 +88,6 @@
             state: link
     become: true
 
-  - name: Install WebApp as a startup service
-    service:
-            name: webapp
-            state: started
-            enabled: yes
-    become: true
-
   - name: Wait for the new webserver to begin responding
     wait_for:
             host: localhost
