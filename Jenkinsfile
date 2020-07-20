@@ -1,6 +1,6 @@
 node {
     stage('Preparation') { 
-        git 'https://github.com/darpasoft/fleetman-position-tracker'
+        git 'https://github.com/darpasoft/fleetman-webapp'
     }
     stage('Build') {
         sh "mvn package"
