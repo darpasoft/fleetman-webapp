@@ -6,7 +6,7 @@ node {
         sh "mvn clean package"
    }
     stage('Results') {
-        archiveArtifacts 'target/*.war'
+        archiveArtifacts 'target/*.jar'
     }
     stage('deploy') {
         withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_credentials_2', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
