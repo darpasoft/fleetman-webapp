@@ -1,4 +1,4 @@
-#  Provisions a new Webserver 
+#  Provisions a new Webserver
 
 - hosts: localhost
   gather_facts: no
@@ -40,6 +40,7 @@
         region: "{{region}}"
         exact_count: 1 
         count_tag:
+          Name: Webserver
           Deploy: New
         instance_tags:
           Name: Webserver
@@ -80,6 +81,21 @@
     copy: 
        src: target/fleetman-0.0.1-SNAPSHOT.war
        dest: /home/ec2-user/webapp/target/
+       mode: 0700
+
+  - name: Build a link to the executable so it becomes a service
+    file:
+            src: /home/ec2-user/webapp/target/fleetman-0.0.1-SNAPSHOT.war
+            dest: /etc/init.d/webapp
+            state: link
+    become: true
+
+  - name: Install WebApp as a startup service
+    service:
+            name: webapp
+            state: started
+            enabled: yes
+    become: true
 
   - name: Wait for the new webserver to begin responding
     wait_for:
