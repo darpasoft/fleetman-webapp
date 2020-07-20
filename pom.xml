@@ -217,6 +217,9 @@
 			<resource>
 				<filtering>false</filtering>
 				<directory>src/main/resources</directory>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
 			</resource>		
 		</resources>
 		
