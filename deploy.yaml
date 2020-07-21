@@ -123,8 +123,8 @@
     register: new_server
     
   - name: Debug the new_server variable
-      debug:
-         msg: "new_server variable: {{ new_server }}"
+    debug:
+       msg: "new_server variable: {{ new_server }}"
 
   - name: Get the id of the old, soon to be dead, green server
     ec2_instance_info:
