@@ -47,7 +47,7 @@
         exact_count: 1 
         count_tag:
           Name: Webserver
-          Deploy: New
+          Deploy: Blue
         instance_tags:
           Name: Webserver
           Deploy: Blue
