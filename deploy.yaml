@@ -112,7 +112,7 @@
 # Series of steps to implement a Green -> Blue switchover
 
 - hosts: localhost
-    tasks:
+  tasks:
   - name: Gather facts about the new blue server
     ec2_remote_facts:
        filters:
