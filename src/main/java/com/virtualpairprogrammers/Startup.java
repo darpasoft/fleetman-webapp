@@ -16,7 +16,7 @@ import com.virtualpairprogrammers.data.VehicleRepository;
 import com.virtualpairprogrammers.domain.Vehicle;
 
 /**
- * Used to ensure that the necessary data is pre-populated.
+ * Used to ensure that the necessary data is pre-populated. test
  * 
  * Of course "in real life" (I'm sick of writing that - do I live in a fake parallel universe?) this
  * data would come from the user/administrator/planner/whatever.
