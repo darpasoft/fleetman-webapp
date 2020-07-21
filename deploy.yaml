@@ -103,11 +103,11 @@
             enabled: yes
     become: true
 
-#  - name: Wait for the new webserver to begin responding
-#    wait_for:
-#            host: localhost
-#            port: 8080
-#            state: started
+  - name: Wait for the new webserver to begin responding
+    wait_for:
+            host: localhost
+            port: 8080
+            state: started
             
 # Series of steps to implement a Green -> Blue switchover
 
