@@ -215,8 +215,12 @@
 		
 		<resources>
 			<resource>
-				<filtering>false</filtering>
+				<filtering>true</filtering>
 				<directory>src/main/resources</directory>
+				<includes>
+					<include>application.properties</include>
+					<include>bootstrap.properties</include>
+				</includes>	
 			</resource>		
 		</resources>
 		
